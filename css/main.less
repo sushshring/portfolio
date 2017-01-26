@@ -1,6 +1,7 @@
 @lightGreen: #00882D;
 @backGreen: #085220;
 @btnGreen: #004226;
+@bhoverGreen: #002018;
 
 body {
   h1,h5 {
@@ -23,19 +24,55 @@ body {
       position: absolute;
       right: 15px;
       top: 15px;
-
-      .fa {
-        margin-right: 5px;
-        .fa-linkedin {
-          background-image: url('./assets/social/linkedinIcon.svg') no-repeat top left;
-          width: inherit;
-          height: inherit;
+    .btn {
+      background-color: @btnGreen;
+      display: inline-block;
+      color: white;
+      transition-duration: 0.5s;
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -ms-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      .icon-briefcase{
+        text-align: center;
+        position: relative;
+        top: -3px;
+        &::before {
+          background-image: url('../assets/social/briefcaseIcon.svg');
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-size: 20px 20px;
+          margin-right: 5px;
+          transition-duration: 0.5s;
+          position: relative;
+          top: 3px;
         }
       }
+      .icon-download {
+        position: relative;
+        top:-3px;
+        &::before {
+          background-image: url('../assets/social/download-solid.svg');
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-size: 20px 20px;
+          margin-right: 5px;
+          position: relative;
+          transition-duration: 0.5s;
+          top: 3px;
+        }
+      }
+      &:hover{
+         background-color: @bhoverGreen;
+         color: white;
+         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+       }
     }
-    .btn {
-
-    }
+  }
     .connect a {
       color: rgba(255, 255, 255, 0.8);
       display: inline-block;
@@ -43,25 +80,46 @@ body {
       width: 32px;
       height: 32px;
       margin-top: 10px;
-      // -webkit-border-radius: 50%;
-      // -moz-border-radius: 50%;
-      // -ms-border-radius: 50%;
-      // -o-border-radius: 50%;
-      // border-radius: 50%;
-      // -moz-background-clip: padding;
-      // -webkit-background-clip: padding-box;
-      // background-clip: padding-box;
-      // padding-top: 2px;
-      // font-size: 16px;
-      // border: 2px solid rgba(255, 255, 255, 0.8);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      transition: all 0.5s;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      font-size: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      &:hover {
+        color: #fff;
+        border-color: #fff;
+        border: 2px solid;
+      }
+      .fa {
+      margin-right: 5px;
+      width: 28px;
+      color: white;
+      height: 28px;
+      display: inline-block;
+      }
+      .fa-linkedin {
+        background-image: url('../assets/social/linkedinIcon.svg');
+      }
+      .fa-facebook {
+        background-image: url('../assets/social/facebookIcon.svg');
+      }
+      .fa-github {
+        background-image: url('../assets/social/githubIcon.svg');
+    }
     }
     .intro {
+      position: relative;
+      top: -100px;
       .profile-image {
         border-radius: 50%;
-        position: relative;
         height: 200px;
         width: 200px;
-        top: -100px;
       }
     }
   }
