@@ -3,6 +3,14 @@
 @btnGreen: #004226;
 
 body {
+  h1,h5 {
+    color: white;
+  }
+  .title {
+    color: white;
+    font-weight: 100;
+    font-size: x-large;
+  }
   .header {
     background-color: @backGreen;
     height: 100%;
@@ -18,6 +26,11 @@ body {
 
       .fa {
         margin-right: 5px;
+        .fa-linkedin {
+          background-image: url('./assets/social/linkedinIcon.svg') no-repeat top left;
+          width: inherit;
+          height: inherit;
+        }
       }
     }
     .btn {
@@ -30,17 +43,26 @@ body {
       width: 32px;
       height: 32px;
       margin-top: 10px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      border-radius: 50%;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box;
-      padding-top: 2px;
-      font-size: 16px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      // -webkit-border-radius: 50%;
+      // -moz-border-radius: 50%;
+      // -ms-border-radius: 50%;
+      // -o-border-radius: 50%;
+      // border-radius: 50%;
+      // -moz-background-clip: padding;
+      // -webkit-background-clip: padding-box;
+      // background-clip: padding-box;
+      // padding-top: 2px;
+      // font-size: 16px;
+      // border: 2px solid rgba(255, 255, 255, 0.8);
+    }
+    .intro {
+      .profile-image {
+        border-radius: 50%;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        top: -100px;
+      }
     }
   }
 }
