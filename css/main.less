@@ -1,10 +1,46 @@
-@lightBlue: #00BCD4;
-@backBlue: #00A9BE;
+@lightGreen: #00882D;
+@backGreen: #085220;
+@btnGreen: #004226;
 
 body {
   .header {
-    background-color: @backBlue;
+    background-color: @backGreen;
     height: 100%;
     width: 100%;
+    .top-bar{
+      padding-bottom: 120px;
+      background-color: @lightGreen;
+    }
+    .actions {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+
+      .fa {
+        margin-right: 5px;
+      }
+    }
+    .btn {
+
+    }
+    .connect a {
+      color: rgba(255, 255, 255, 0.8);
+      display: inline-block;
+      text-align: center;
+      width: 32px;
+      height: 32px;
+      margin-top: 10px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      padding-top: 2px;
+      font-size: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+    }
   }
 }
