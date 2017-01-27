@@ -1,7 +1,9 @@
-@lightGreen: #00882D;
-@backGreen: #085220;
-@btnGreen: #004226;
-@bhoverGreen: #002018;
+@green5: #153028;
+@green4: #004D48;
+@green3: #006855;
+@navBar: #759197;
+@btnGreen: #009445;
+@bhoverGreen: #002219;
 
 body {
   h1,h5 {
@@ -13,17 +15,22 @@ body {
     font-size: x-large;
   }
   .header {
-    background-color: @backGreen;
+    background-color: @green4;
     height: 100%;
     width: 100%;
     .top-bar{
       padding-bottom: 120px;
-      background-color: @lightGreen;
+      background-color: @green3;
     }
     .actions {
       position: absolute;
       right: 15px;
       top: 15px;
+      @media(max-width: 767px) {
+        position: static;
+        margin: 30px auto;
+        text-align: center;
+      }
     .btn {
       background-color: @btnGreen;
       display: inline-block;
@@ -33,38 +40,8 @@ body {
       -moz-transition-duration: 0.5s;
       -ms-transition-duration: 0.5s;
       -o-transition-duration: 0.5s;
-      .icon-briefcase{
-        text-align: center;
-        position: relative;
-        top: -3px;
-        &::before {
-          background-image: url('../assets/social/briefcaseIcon.svg');
-          content: "";
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          background-size: 20px 20px;
-          margin-right: 5px;
-          transition-duration: 0.5s;
-          position: relative;
-          top: 3px;
-        }
-      }
-      .icon-download {
-        position: relative;
-        top:-3px;
-        &::before {
-          background-image: url('../assets/social/download-solid.svg');
-          content: "";
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          background-size: 20px 20px;
-          margin-right: 5px;
-          position: relative;
-          transition-duration: 0.5s;
-          top: 3px;
-        }
+      .fa {
+        display: inline;
       }
       &:hover{
          background-color: @bhoverGreen;
@@ -73,7 +50,12 @@ body {
        }
     }
   }
-    .connect a {
+    .connect {
+      @media(max-width: 767px) {
+        margin: 0 auto;
+        text-align: center;
+      }
+      a {
       color: rgba(255, 255, 255, 0.8);
       display: inline-block;
       text-align: center;
@@ -91,28 +73,21 @@ body {
       background-clip: padding-box;
       font-size: 16px;
       border: 2px solid rgba(255, 255, 255, 0.8);
+      padding-top: 3px;
+      .fa {
+      margin-right: 5px;
+      width: 28px;
+      color: inherit;
+      height: 28px;
+      display: inline-block;
+      }
       &:hover {
         color: #fff;
         border-color: #fff;
         border: 2px solid;
       }
-      .fa {
-      margin-right: 5px;
-      width: 28px;
-      color: white;
-      height: 28px;
-      display: inline-block;
-      }
-      .fa-linkedin {
-        background-image: url('../assets/social/linkedinIcon.svg');
-      }
-      .fa-facebook {
-        background-image: url('../assets/social/facebookIcon.svg');
-      }
-      .fa-github {
-        background-image: url('../assets/social/githubIcon.svg');
     }
-    }
+  }
     .intro {
       position: relative;
       top: -100px;
@@ -120,6 +95,51 @@ body {
         border-radius: 50%;
         height: 200px;
         width: 200px;
+      }
+    }
+    .contact {
+      background-color: @green5;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-size: 16px;
+      ul {
+        margin-bottom: 0px;
+        // white-space: nowrap;
+        li {
+          margin-right: 30px;
+          margin-bottom: 10px;
+          // display: inline-block;
+          text-align: -webkit-match-parent;
+          color: rgba(255, 255, 255, 0.8);
+          a {
+            width: 100%;
+            color: rgba(255,255,255,0.5);
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            -ms-transition-duration: 0.5s;
+          }
+          a:hover {
+            color: #fff;
+          }
+          .fa {
+            margin-right: 10px;
+            width: 28px;
+          }
+        }
+      }
+    }
+    .page-nav-space-holder {
+      @media (min-width: 768px) {
+        .navbar .navbar-nav {
+            display: inline-block;
+            float: none;
+            vertical-align: top;
+        }
+        .navbar .navbar-collapse {
+            text-align: center;
+        }
       }
     }
   }
