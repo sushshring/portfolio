@@ -1,8 +1,8 @@
-var less = require('less');
-
-less.render('.class { width: (1 + 1) }', function (e, output) {
-  console.log(output.css);
-});
+// var less = require('less');
+//
+// less.render('.class { width: (1 + 1) }', function (e, output) {
+//   console.log(output.css);
+// });
 
 
 /***********************************************
@@ -27,3 +27,19 @@ function dd_scrolltotop(duration){
 	}
 	jumptop();
 }
+
+$('document').ready(function() {
+  if ($(window).width() < 768) {
+    console.log("on phone");
+    $('nav').removeClass('hidden-sm');
+    $('nav').removeClass('hidden-xs');
+    $('nav').addClass('navbar-fixed-bottom');
+  }
+  $(window).on('resize', function() {
+    if($(this).width < 786) {
+      $('nav').removeClass('hidden-sm');
+      $('nav').removeClass('hidden-xs');
+      $('nav').addClass('navbar-fixed-bottom');
+    }
+  })
+});
