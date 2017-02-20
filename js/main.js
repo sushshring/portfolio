@@ -41,5 +41,5 @@ $('document').ready(function() {
       $('nav').removeClass('hidden-xs');
       $('nav').addClass('navbar-fixed-bottom');
     }
-  })
+  });
 });
