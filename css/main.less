@@ -5,7 +5,61 @@
 @btnGreen: #009445;
 @bhoverGreen: #002219;
 
-* {
+.header {
+    background-color: @green4;
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+    background-size: cover;
+    color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    .intro {
+      position: relative;
+      top: -100px;
+      .profile-image {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+    .contact {
+      background-color: @green5;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-size: 16px;
+      ul {
+        margin-bottom: 0px;
+        // white-space: nowrap;
+        li {
+          margin-right: 30px;
+          margin-bottom: 10px;
+          // display: inline-block;
+          text-align: -webkit-match-parent;
+          color: rgba(255, 255, 255, 0.8);
+          a {
+            width: 100%;
+            color: rgba(255,255,255,0.5);
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            -ms-transition-duration: 0.5s;
+          }
+          a:hover {
+            color: #fff;
+          }
+          .fa {
+            margin-right: 10px;
+            width: 28px;
+          }
+        }
+      }
+    }
+/** {
   margin: 0px;
 }
 body {
@@ -19,16 +73,6 @@ body {
     font-weight: 100;
     font-size: x-large;
   }
-  .header {
-    background-color: @green4;
-    height: 100%;
-    min-width: 100%;
-    width: 100%;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-repeat: no-repeat;
     .top-bar{
       padding-bottom: 120px;
       background-color: @green3;
@@ -99,48 +143,6 @@ body {
       }
     }
   }
-    .intro {
-      position: relative;
-      top: -100px;
-      .profile-image {
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-      }
-    }
-    .contact {
-      background-color: @green5;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      font-size: 16px;
-      ul {
-        margin-bottom: 0px;
-        // white-space: nowrap;
-        li {
-          margin-right: 30px;
-          margin-bottom: 10px;
-          // display: inline-block;
-          text-align: -webkit-match-parent;
-          color: rgba(255, 255, 255, 0.8);
-          a {
-            width: 100%;
-            color: rgba(255,255,255,0.5);
-            transition-duration: 0.5s;
-            -webkit-transition-duration: 0.5s;
-            -moz-transition-duration: 0.5s;
-            -o-transition-duration: 0.5s;
-            -ms-transition-duration: 0.5s;
-          }
-          a:hover {
-            color: #fff;
-          }
-          .fa {
-            margin-right: 10px;
-            width: 28px;
-          }
-        }
-      }
-    }
     .page-nav-space-holder {
       .navbar-default {
       background-color: @navBar;
@@ -214,3 +216,4 @@ body {
 //   }
 // }
 }
+*/
