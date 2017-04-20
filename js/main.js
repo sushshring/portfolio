@@ -1,10 +1,3 @@
-// var less = require('less');
-//
-// less.render('.class { width: (1 + 1) }', function (e, output) {
-//   console.log(output.css);
-// });
-
-
 /***********************************************
 * Scroll to Top link- By Dynamic Drive (www.dynamicdrive.com)
 * Visit http://www.dynamicdrive.com/ for this script and 100s more.
@@ -27,6 +20,36 @@ function dd_scrolltotop(duration){
 	}
 	jumptop();
 }
+ $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+        var navHeight = $(".navbar-header").height();
+
+        $("#page-navs li").each(function() {
+            var curLink = $(this).find("a").first();
+            var anchorEl = $(curLink.attr("href"));
+            if (!navClicked) {
+                if (anchorEl.offset().top <= scrollTop + navHeight && anchorEl.offset().top + anchorEl.height() > scrollTop + navHeight) {
+                    $(this).addClass('active').siblings().removeClass('active');
+                }
+            }
+        });
+    });
+
+	function scrollToID(id, speed){
+        var offSet = 20;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        navClicked = true;
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        setTimeout(function() {
+            navClicked = false;
+        }, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+	}
+
 
 $('document').ready(function() {
   if ($(window).width() < 768) {
