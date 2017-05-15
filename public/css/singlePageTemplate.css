@@ -335,7 +335,7 @@ a.btn:hover {
 .timeline .item:after {
   content: "";
   position: absolute;
-  left: -37px;
+  left: -36.6px;
   top: 6px;
   display: inline-block;
   width: 10px;
@@ -345,6 +345,25 @@ a.btn:hover {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #26625B;
+  z-index: 10;
+}
+.timeline:after{
+  content:"";
+  position: relative;
+  left: -41px;
+  bottom: -5px;
+  display: inline-block;
+  width: 20px;
+  height: 5px;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  -o-border-radius: 0%;
+  border-radius: 0%;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -368,6 +387,8 @@ a.btn:hover {
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 300;
+  max-width:200px;
+  overflow-wrap: break-word;
 }
 .timeline .job-meta {
   position: absolute;
