@@ -1,8 +1,3 @@
-/***********************************************
-* Scroll to Top link- By Dynamic Drive (www.dynamicdrive.com)
-* Visit http://www.dynamicdrive.com/ for this script and 100s more.
-***********************************************/
-
 function dd_scrolltotop(duration){
 	duration = duration || 500;
 	var rootel = (document.compatMode =="BackCompat")? document.body : document.documentElement;
@@ -18,21 +13,29 @@ function dd_scrolltotop(duration){
 			scrolltimer = setTimeout(function(){jumptop();}, 10);
 		}
 	}
+
 	jumptop();
 }
- $(window).scroll(function() {
+ $(window).scroll(function(e) {
         var scrollTop = $(this).scrollTop();
-        var navHeight = $(".navbar-header").height();
+        var navHeight = $(".page-nav-space-holder").offset().top;
 
-        $("#page-navs li").each(function() {
+        $("#page-nav li").each(function() {
+            console.log("clicked");
             var curLink = $(this).find("a").first();
             var anchorEl = $(curLink.attr("href"));
-            if (!navClicked) {
-                if (anchorEl.offset().top <= scrollTop + navHeight && anchorEl.offset().top + anchorEl.height() > scrollTop + navHeight) {
+            if (anchorEl.offset().top <= scrollTop + navHeight && anchorEl.offset().top + anchorEl.height() > scrollTop + navHeight) {
                     $(this).addClass('active').siblings().removeClass('active');
-                }
             }
         });
+        if (scrollTop >= 0) {
+
+        }
+        if (scrollTop >= navHeight) {
+            $(".page-nav-wrapper").addClass('fixed');
+        } else {
+            $(".page-nav-wrapper").removeClass('fixed');
+        }
     });
 
 	function scrollToID(id, speed){
