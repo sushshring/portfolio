@@ -423,10 +423,9 @@ a.btn:hover {
   margin-bottom: 0px;
 }
 .education-section .education-body {
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 0px;
   font-size: 16px;
-  font-weight: 300;
 }
 .education-section .time {
   color: #8a8a8a;
@@ -434,6 +433,20 @@ a.btn:hover {
 }
 .education-section .desc {
   color: #666;
+}
+.university{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+.university-shield {
+  width:100%;
+  float:right;
+  max-width:100px;
+}
+.unviersity-meta {
+  width:75%;
+  float:right;
 }
 .skills-section .subtitle {
   font-size: 18px;
