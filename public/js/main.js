@@ -51,8 +51,10 @@ $('document').ready(function() {
 
         if (scrollTop >= navHeight) {
             $(".page-nav-wrapper").addClass('fixed');
+            $('.nav-image').removeClass('hidden');
         } else {
             $(".page-nav-wrapper").removeClass('fixed');
+            $('.nav-image').addClass('hidden');
         }
     });
     $('#page-nav a').click((e) => {
