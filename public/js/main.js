@@ -31,7 +31,18 @@ $('document').ready(function() {
       $('nav').addClass('navbar-fixed-bottom');
     }
   });
-  $(window).scroll(function(e) {
+
+    $('.chart').easyPieChart({		
+		barColor:'#26625B',//Pie chart colour
+		trackColor: '#e8e8e8',
+		scaleColor: false,
+		lineWidth : 5,
+		animate: 2000,
+		onStep: function(from, to, percent) {
+			$(this.el).find('span').text(Math.round(percent));
+		}
+	});  
+  $(window).on('scroll reload load', function(e) {
         var scrollTop = $(this).scrollTop();
         var navHeight = $(".page-nav-space-holder").offset().top;
 
@@ -51,10 +62,8 @@ $('document').ready(function() {
 
         if (scrollTop >= navHeight) {
             $(".page-nav-wrapper").addClass('fixed');
-            $('.nav-image').removeClass('hidden');
         } else {
             $(".page-nav-wrapper").removeClass('fixed');
-            $('.nav-image').addClass('hidden');
         }
     });
     $('#page-nav a').click((e) => {
