@@ -623,26 +623,19 @@ a.btn:hover {
   -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
-.portfolio-section .item-inner figure {
-  max-height: 110px;
-}
 .portfolio-section .item-inner img {
   width: 100%;
-  clip-path: polygon(0% 0%, 101% 0%, 100% 50%, 0% 50%);
-  
 }
 
-.portfolio-section .item-inner img:hover {
-  clip-path: none;
-}
 .portfolio-section .item-inner:hover img {
   -webkit-opacity: 0.9;
   -moz-opacity: 0.9;
   opacity: 0.9;
 }
+
 .portfolio-section .item-inner .content {
-  padding: 30px;
-  padding-bottom: 75px;
+  padding: 10px;
+  padding-bottom: 15px;
   position: relative;
 }
 .portfolio-section .item-inner .content a {
@@ -675,7 +668,7 @@ a.btn:hover {
   position: absolute;
   top: 0px;
   background-color: rgba(0,0,0,0.5);
-  width: 100%;
+  width: 89%;
   height: 100%;
   padding: 10px;
 }

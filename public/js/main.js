@@ -92,4 +92,11 @@ $('document').ready(function() {
             mainNav.removeClass("open");
         }
 	}
+    $('.item').hover(function(e) {
+        var href = $(this).children('.item-inner').attr('data-href');
+        $('.content-description[data-target='+href+']').show(200);
+    }, function(e) {
+        var href = $(this).children('.item-inner').attr('data-href');
+        $('.content-description[data-target='+href+']').hide(200);
+    });
 });
