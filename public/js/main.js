@@ -68,15 +68,21 @@ $('document').ready(function() {
         }
         
         if (scrollTop >= navHeight) {
+            $('#topcontrol').fadeIn("slow");
             $(".page-nav-wrapper").addClass('fixed');
         } else {
+            $('#topcontrol').fadeOut("slow", );
             $(".page-nav-wrapper").removeClass('fixed');
         }
     });
-    $('#page-nav a').click((e) => {
+    $('#page-nav a').click(function (e) {
         console.log($(e.target).attr('href'));
         scrollToID($(e.target).attr('href'), 1000);
     });
+
+    $('#topcontrol').click(function() {
+        scrollToID('header', 2000);
+    })
     
 	function scrollToID(id, speed){
         var offSet = $(".page-nav-space-holder").height()+20;
@@ -99,4 +105,5 @@ $('document').ready(function() {
         var href = $(this).find('.item-inner').attr('data-href');
         $('.content-description[data-target='+href+']').hide(200);
     });
+    
 });
