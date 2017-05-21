@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "easy-pie-chart": "^2.1.7"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.0.4"
   }
 }

@@ -23,6 +23,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script defer src="node-modules/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    <script defer>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99608161-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesnt work if you view the page via file: -->
     <!--[if lt IE 9]>
@@ -83,6 +93,7 @@
                         <li><a class="scrollto" href="#experiences-section">Experiences</a></li>
                         <li><a class="scrollto" href="#education-section">Education</a></li>
                         <li><a class="scrollto" href="#skills-section">Skills</a></li>
+                        <li><a class="scrollto" href="#portfolio-section">Portfolio</a></li>
                         <li><a class="scrollto" href="#contact-section">Contact</a></li>
                     </nav>
                     <!--//page-nav-->
@@ -288,8 +299,55 @@
                             </div> 
                         </div>
                     </div>
+                </div>
+           </div>
+           <div class="other-skills center">
+               <h3 class="subtitle">Other Skills</h3>
+               <div class="misc-skills">
+                   <span class="skill-tag">HTML5</span>
+                   <span class="skill-tag">CSS3</span>
+                   <span class="skill-tag">Python</span>
+                   <span class="skill-tag">SQL</span>
+                   <span class="skill-tag">JQuery</span>
+                   <br>
+                   <span class="skill-tag">MongoDB</span>
+                   <span class="skill-tag">Android</span>
+                   <span class="skill-tag">Firebase</span>
+                   <span class="skill-tag">Bash</span>
+                   <span class="skill-tag">React.JS</span>
+                   <span class="skill-tag">Angular</span>
+               </div>
+           </div>
         </section>
         <!--//section-->
+        <section id="portfolio-section" class="portfolio-section section">
+            <h2 class="section-title">Portfolio</h2>
+            <ul id="filters" class="filters">
+                <li class="type">All </li>
+            </ul>
+            <div class="items-wrapper row center">
+                <div class="item col-md-3 col-xs-6 ">
+                    <div class="item-inner" data-href="familyfirst">
+                        <figure class="figure">
+                            <img class="img-responsive clip-path" src="assets/images/familyfirst.png" alt="">
+                        </figure>
+                        <div>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">FamilyFirst</a></h3>
+                                <div class="meta">Android</div>
+                            </div><!--//content-->    
+                        </div>
+                        <!--<a class="link-mask" href="#"></a>-->
+                    </div><!--//item-inner-->
+                    <!--<div class="content-description white" data-target="familyfirst">
+                         <h3 class="subtitle">FamilyFirst</h3>
+                         <div class="content">
+                             FamilyFirst is a cross platform ecosystem built for quick communication between Surgeons/Nurses and the families of their patients.
+                         </div>
+                    </div>   -->
+                </div>
+            </div>
+        </section>
 
 
         <section id="contact-section" class="contact-section section">
