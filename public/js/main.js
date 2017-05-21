@@ -93,10 +93,10 @@ $('document').ready(function() {
         }
 	}
     $('.item').hover(function(e) {
-        var href = $(this).children('.item-inner').attr('data-href');
+        var href = $(this).find('.item-inner').attr('data-href');
         $('.content-description[data-target='+href+']').show(200);
     }, function(e) {
-        var href = $(this).children('.item-inner').attr('data-href');
+        var href = $(this).find('.item-inner').attr('data-href');
         $('.content-description[data-target='+href+']').hide(200);
     });
 });
