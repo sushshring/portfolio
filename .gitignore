@@ -1,7 +1,7 @@
-!node-modules
 .idea
 .DS_Store
 .git
 .vscode
 idea
 firebase-debug.log
+node-modules
