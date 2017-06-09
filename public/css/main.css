@@ -201,7 +201,7 @@ a.btn:hover {
   font-size: 16px;
 }
 .header .profile {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
 }
 .header .contact-info {
@@ -493,6 +493,9 @@ a.btn:hover {
   padding: 10px;
 }
 
+.education-body .awards ul {
+  -webkit-padding-start: 0px;
+}
 .education-body .activities {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
   padding: 10px;
@@ -507,7 +510,7 @@ a.btn:hover {
     padding: 5px;
   }
   .education-category {
-    height: 210px;
+    height: 200px;
   }
 }
 .hackpsu-logo {
@@ -519,6 +522,36 @@ a.btn:hover {
 }
 .carousel-inner li {
   text-align: left;
+}
+.carousel-fade .carousel-inner .item {
+    transition-property: opacity;
+    -webkit-transition-property: opacity;
+    transition-delay: 0.22s;
+    transition-timing-function: ease-in-out;
+}
+        
+.carousel-fade .carousel-inner  .item,
+.active.left,
+.active.right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.next.left,
+.prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.prev,
+.active.left,
+.active.right {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
 }
 
 .skills-section .subtitle {
@@ -535,9 +568,6 @@ a.btn:hover {
   margin-left: auto;
   margin-right: auto;
   width: 75%;
-}
-.skills-section .top-skills .item {
-  margin-bottom: 45px;
 }
 .skills-section .level {
   color: #8a8a8a;
@@ -728,6 +758,23 @@ a.btn:hover {
 .footer .container a {
   color: #8a8a8a;
 }
+
+/*************** FORM ***************/
+.hidden {
+  display: none;
+}
+.font-sm{
+  font-size: 12px;
+}
+
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .header .social {

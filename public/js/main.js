@@ -17,6 +17,8 @@ function dd_scrolltotop(duration){
 	jumptop();
 }
 
+$('.carousel').carousel();
+
 $('document').ready(function() {
     if ($(window).width() < 768) {
         console.log("on phone");
@@ -105,5 +107,4 @@ $('document').ready(function() {
         var href = $(this).find('.item-inner').attr('data-href');
         $('.content-description[data-target='+href+']').hide(200);
     });
-    
 });

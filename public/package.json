@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "easy-pie-chart": "^2.1.7"
+    "easy-pie-chart": "^2.1.7",
+    "jquery-form-validator": "^2.3.64",
+    "parsleyjs": "^2.7.2"
   },
   "devDependencies": {
     "@angular/cli": "^1.0.4"
