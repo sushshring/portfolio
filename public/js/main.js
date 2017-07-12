@@ -1,10 +1,10 @@
 function dd_scrolltotop(duration){
 	duration = duration || 500;
-	var rootel = (document.compatMode =="BackCompat")? document.body : document.documentElement;
+	var rootel = (document.compatMode ==="BackCompat")? document.body : document.documentElement;
 	if (rootel.scrollTop === 0) // in some browsers such as Chrome, use document.body instead of document.documentElement
     rootel = document.body;
-	var curscrolltop = rootel.scrollTop, scrolltimer, elapsedtime, starttime = new Date().getTime(), animatedegree = 0;
-	var totaldis = curscrolltop;
+    var scrolltimer, elapsedtime, starttime = new Date().getTime(), animatedegree = 0;
+    var totaldis = rootel.scrollTop;
 	clearTimeout(scrolltimer);
 	function jumptop(){
 		elapsedtime = new Date().getTime() - starttime;
@@ -56,11 +56,11 @@ $('document').ready(function() {
         var navHeight = $(".page-nav-space-holder").offset().top;
         
         if (scrollTop <= 20) {
-            $('#page-nav li').each(function () {
+            $('#page-nav').find('li').each(function () {
                 $(this).removeClass('active');
             })
         } else {
-            $("#page-nav li").each(function() {
+            $("#page-nav").find("li").each(function() {
                 var curLink = $(this).find("a").first();
                 var anchorEl = $(curLink.attr("href"));
                 if (anchorEl.offset().top <= scrollTop + navHeight && anchorEl.offset().top + anchorEl.height() > scrollTop) {
@@ -77,14 +77,14 @@ $('document').ready(function() {
             $(".page-nav-wrapper").removeClass('fixed');
         }
     });
-    $('#page-nav a').click(function (e) {
+    $('#page-nav').find('a').click(function (e) {
         console.log($(e.target).attr('href'));
         scrollToID($(e.target).attr('href'), 1000);
     });
 
     $('#topcontrol').click(function() {
         scrollToID('header', 2000);
-    })
+    });
     
 	function scrollToID(id, speed){
         var offSet = $(".page-nav-space-holder").height()+20;
