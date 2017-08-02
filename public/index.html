@@ -14,13 +14,15 @@
     <title>Sushrut Shringarputale</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Sans-Serif:300,400,700" rel="stylesheet">
     <!-- Latest compiled and minified JavaScript -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+          href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
     <style type="text/css">
         @import url("assets/font-awesome-4.7.0/css/font-awesome.min.css");
     </style>
@@ -28,11 +30,15 @@
     <script src="node-modules/jquery/dist/jquery.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script defer src="js/animatedModal.min.js"></script>
     <script defer src="node-modules/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
     <script defer>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
@@ -122,7 +128,7 @@
                 <div class="job-meta container-fluid">
                     <div class="work-logo-left col-xl-12">
                         <a href="http://smartleaven.com/" target="_blank">
-                        <img src="assets/images/smartleaven.png" class="work-logo">
+                            <img src="assets/images/smartleaven.png" class="work-logo">
                         </a>
                     </div>
                     <div class="title row">
@@ -149,7 +155,7 @@
                 <div class="job-meta container-fluid">
                     <div class="work-logo-left col-xl-12">
                         <a href="https://pennstateit.psu.edu/" target="_blank">
-                        <img src="assets/images/penn-state-shield.png" class="work-logo">
+                            <img src="assets/images/penn-state-shield.png" class="work-logo">
                         </a>
                     </div>
                     <div class="title row">
@@ -182,7 +188,7 @@
                 <div class="job-meta container-fluid">
                     <div class="work-logo-left">
                         <a href="https://www.infineon.com/" target="_blank">
-                        <img src="assets/images/Infineon-Logo.png" class="work-logo">
+                            <img src="assets/images/Infineon-Logo.png" class="work-logo">
                         </a>
                     </div>
                     <div class="title row"> IT Intern</div>
@@ -228,14 +234,16 @@
                             <div class="col-md-6 col-sm-12 education-category-holder">
                                 <div class="education-category awards">
                                     <div class="row">
-                                    <h3 style="margin-left: auto">Awards &amp; Honors</h3>
+                                        <h3 style="margin-left: auto">Awards &amp; Honors</h3>
                                     </div>
                                     <div class="row">
-                                    <ul style="margin-top: 20px;">
-                                        <li class="left"> <strong>Dean's List: </strong> 5 semesters </li>
-                                        <li class="center"> <a href="http://honors.bw.psu.edu/cooper/" target="_blank" class="white">Jane E. Coopers Honors Program </a></li>
-                                        <li class="right"> Scott Latimer Engineering Award </li>
-                                    </ul>
+                                        <ul style="margin-top: 20px;">
+                                            <li class="left"><strong>Dean's List: </strong> 5 semesters</li>
+                                            <li class="center"><a href="http://honors.bw.psu.edu/cooper/"
+                                                                  target="_blank" class="white">Jane E. Coopers Honors
+                                                Program </a></li>
+                                            <li class="right"> Scott Latimer Engineering Award</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -370,53 +378,15 @@
     <!--//section-->
     <section id="portfolio-section" class="portfolio-section section">
         <h2 class="section-title">Portfolio</h2>
-        <ul id="filters" class="filters">
-            <li class="type">All </li>
+        <ul id="filters" class="filters clearfix">
+            <li class="type active" data-filter="*">All</li>
+            <li class="type" data-filter=".ios">iOS</li>
+            <li class="type" data-filter=".android">Android</li>
+            <li class="type" data-filter=".web">Web</li>
         </ul>
-        <div class="items-wrapper row center">
-            <div class="item col-md-3 col-xs-6 ">
-                <div class="item-inner" data-href="familyfirst">
-                    <figure class="figure">
-                        <img class="img-responsive" src="assets/images/familyfirst.png" alt="">
-                    </figure>
-                    <div>
-                        <div class="content text-left">
-                            <h3 class="sub-title">FamilyFirst</h3>
-                            <div class="meta">Android</div>
-                        </div><!--//content-->
-                    </div>
-                    <!--<a class="link-mask" href="#"></a>-->
-                </div><!--//item-inner-->
-                <div class="content-description white" data-target="familyfirst">
-                    <h3 class="subtitle">FamilyFirst</h3>
-                    <div class="content">
-                        FamilyFirst is a cross platform ecosystem built for quick communication between Surgeons/Nurses and the families of their patients.
-                    </div>
-                </div>
-            </div>
-            <div class="item col-md-3 col-xs-6 ">
-                <div class="item-inner" data-href="bookmyturf">
-                    <figure class="figure">
-                        <img class="img-responsive" src="assets/images/bookmyturf.svg" alt="">
-                    </figure>
-                    <div>
-                        <div class="content text-left">
-                            <h3 class="sub-title">BookMyTurf</h3>
-                            <div class="meta">Android</div>
-                        </div><!--//content-->
-                    </div>
-                    <!--<a class="link-mask" href="#"></a>-->
-                </div><!--//item-inner-->
-                <div class="content-description white" data-target="bookmyturf">
-                    <h3 class="subtitle">BookMyTurf</h3>
-                    <div class="content">
-                        BookMyTurf provides a super-intuitive system to collaborate with friends to book local sports turfs. It lets you chat with friends
-                        so you can co-ordinate a time and also search for locations.
-                    </div>
-                </div>
-            </div>
-            <div class="item col-md-3 col-xs-6 ">
-                <a href="https://hackpsu.org" target="_blank">
+        <div class="items-wrapper isotope row center">
+            <div class="item web android ios col-md-3 col-xs-6 ">
+                <a href="#animatedModal" class="modal-target" modal-href="https://hackpsu.org" modal-color="#221A25">
                     <div class="item-inner" data-href="hackpsu">
                         <figure class="figure">
                             <img class="img-responsive" src="assets/images/hackpsu.svg" alt="">
@@ -431,15 +401,138 @@
                     </div><!--//item-inner-->
                     <div class="content-description white" data-target="hackpsu">
                         <h3 class="subtitle">HackPSU</h3>
-                        <div class="content">
-                            We built the HackPSU website and app for Fall 2016, Spring 2017, and Fall 2017.
-                            Check out the website and definitely come checkout our awesome hackathon!
+                        <div class="content blurb">
+                            I helped build the tech-system for HackPSU for Fall 2016, Spring 2017, and Fall 2017, which
+                            included various tech solutions to make the hackathon experience better, as well as
+                            designing and coding the website. \n\n For the Spring 2017 hackathon, we created a
+                            cross-platform application for the organizers that was able to scan a QR code sent to
+                            participants on confirming attendance. This presented all attendant data to the organizer
+                            with a simple action, and made checking in a breeze! \n\n 👈🏽Our efforts led to a fantastic
+                            experience for our 500+ hackers, so check out the website and definitely come visit our
+                            awesome hackathon!
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item android col-md-3 col-xs-6 ">
+                <a href="#animatedModal" class="modal-target" modal-href="http://familyfirst.io" modal-color="#ee0451">
+                    <div class="item-inner" data-href="familyfirst">
+                        <figure class="figure">
+                            <img class="img-responsive" src="assets/images/familyfirst.png" alt="">
+                        </figure>
+                        <div>
+                            <div class="content text-left">
+                                <h3 class="sub-title">FamilyFirst</h3>
+                                <div class="meta">Android</div>
+                            </div><!--//content-->
+                        </div>
+                        <!--<a class="link-mask" href="#"></a>-->
+                    </div><!--//item-inner-->
+                    <div class="content-description white" data-target="familyfirst">
+                        <h3 class="subtitle">Familyfirst</h3>
+                        <div class="content blurb">
+                            Familyfirst is a mobile platform residing in the hospital environment, that enhances the
+                            experience for families of patients being treated in a hospital. Our mission is to offer a
+                            seamless portal of communication between caregivers and their patient’s families, entitling
+                            families to stay in the loop regarding the status of their loved one.\n\n We built
+                            Familyfirst as a team of three developers in State College, PA, Philadelphia, and San
+                            Fransisco. Together, we developed the backend stack, as well as both the iOS and Android
+                            versions of the app. We are currently in talks to deploy this system at the Good Samaritan
+                            Hospital, West Chester, NY
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item android col-md-3 col-xs-6 ">
+                <a href="#animatedModal" class="modal-target" modal-color="#009D47">
+                <div class="item-inner" data-href="bookmyturf">
+                    <figure class="figure">
+                        <img class="img-responsive" src="assets/images/bookmyturf.svg" alt="">
+                    </figure>
+                    <div>
+                        <div class="content text-left">
+                            <h3 class="sub-title">BookMyTurf</h3>
+                            <div class="meta">Android</div>
+                        </div><!--//content-->
+                    </div>
+                    <!--<a class="link-mask" href="#"></a>-->
+                </div><!--//item-inner-->
+                <div class="content-description white" data-target="bookmyturf">
+                    <h3 class="subtitle">BookMyTurf</h3>
+                    <div class="content blurb">
+                        BookMyTurf provides a super-intuitive system to collaborate with your friends to book local
+                        sports turfs. Our aim was to reduce the difficulty in creating a plan that all your friends
+                        agree upon. So, we created a simple system that provides powerful tools to make that process
+                        easier. \n\nThe application implements an XMPP-based messaging system that lets the user
+                        coordinate their plan without ever leaving the app.
+                        The user can browse locations, available times, as well as rates, after which they can confirm
+                        their booking without ever leaving the app.
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item android col-md-3 col-xs-6 ">
+                <a href="#animatedModal" class="modal-target" modal-color="#004e64">
+                    <div class="item-inner" data-href="hotspot">
+                        <figure class="figure">
+                            <img class="img-responsive" src="assets/images/hotspot.png" alt="">
+                        </figure>
+                        <div>
+                            <div class="content left">
+                                <h3 class="sub-title">Hotspot</h3>
+                                <div class="meta">Android</div>
+                            </div><!--//content-->
+                        </div>
+                        <!--<a class="link-mask" href="#"></a>-->
+                    </div><!--//item-inner-->
+                    <div class="content-description white" data-target="hotspot">
+                        <h3 class="subtitle">Hotspot</h3>
+                        <div class="content blurb">
+                            Hotspot was developed as a travel-discovery app for undiscovered locations. It aims at
+                            creating a crowd-sourced network of locations across the country, which will then lead to
+                            improved tourism at those locations. \n\n Hotspot was built as a full-stack application on
+                            Google's Cloud Platform, using Node.js, Express, and MySQL for its backend. The frontend was
+                            developed for Android and implemented efficient content-delivery mechanisms to improve the
+                            compatibilty with even the simplest phones. \n\n Further development and deployment for
+                            Hotspot is now handled by Smartleaven Technologies.
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="items-wrapper isotope row center">
+            <div class="item ios col-md-3 col-xs-6 ">
+                <a href="#animatedModal" class="modal-target"
+                   modal-href="https://itunes.apple.com/us/app/yogatimer/id1261025779?mt=8&ign-mpt=uo%3D4"
+                   modal-color="#992C90">
+                    <div class="item-inner" data-href="yogatimer">
+                        <figure class="figure">
+                            <img class="img-responsive" src="assets/images/YogaIcon.png" alt="">
+                        </figure>
+                        <div>
+                            <div class="content text-left">
+                                <h3 class="sub-title">YogaTimer</h3>
+                                <div class="meta">iOS</div>
+                            </div><!--//content-->
+                        </div>
+                        <!--<a class="link-mask" href="#"></a>-->
+                    </div><!--//item-inner-->
+                    <div class="content-description white" data-target="yogatimer">
+                        <h3 class="subtitle">YogaTimer</h3>
+                        <div class="content blurb">
+                            YogaTimer is a simple application that provides vocal counts for your yoga poses. Its design
+                            is centered around the user, so it had to prevent the user from complicated configuration.
+                            The user simply sets the maximum time initially, and then they can tap to start and tap to
+                            stop.
+                            \n\n Take a look at it on the App Store and leave a review! 🙏🏽🙏🏽
                         </div>
                     </div>
                 </a>
             </div>
             <div class="item col-md-3 col-xs-6 ">
-                <a href="https://devpost.com/software/battlebot-8soghd" target="_blank">
+                <a href="#animatedModal" class="modal-target"
+                   modal-href="https://devpost.com/software/battlebot-8soghd">
                     <div class="item-inner" data-href="battlebot">
                         <figure class="figure">
                             <img class="img-responsive" src="assets/images/alexa.svg" alt="">
@@ -454,17 +547,18 @@
                     </div><!--//item-inner-->
                     <div class="content-description white" data-target="battlebot">
                         <h3 class="subtitle">BattleBot</h3>
-                        <div class="content">
-                            With Battlebot, you can drop your sickest verse and Alexa will rap battle you back.
-                            We built a database of 100,000 songs, so Alexa always has the perfect answer to your rap verse.
+                        <div class="content blurb">
+                            Drop your sickest verse and Alexa will rap battle you back. With Battlebot, we gave Alexa
+                            the ability to understand the sentiments of your speech and reply back with a similar
+                            lyric.\n\n
+                            Our database is built from over 10,000 real rap lyrics. Alexa holds nothing back, so how
+                            many lines can you trade?\n\nTeam Members: \nScott Miller\nMatt Young\nZach Ferreira
                         </div>
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="items-wrapper row center">
             <div class="item col-md-3 col-xs-6 ">
-                <a href="https://devpost.com/software/hackysu17" target="_blank">
+                <a href="#animatedModal" class="modal-target" modal-href="https://devpost.com/software/hackysu17">
                     <div class="item-inner" data-href="ddalexa">
                         <figure class="figure">
                             <img class="img-responsive" src="assets/images/alexa.svg" alt="">
@@ -479,11 +573,53 @@
                     </div><!--//item-inner-->
                     <div class="content-description white" data-target="ddalexa">
                         <h3 class="subtitle">Ding-Dong Alexa</h3>
-                        <div class="content">
-                            When you ask Alexa who is at the door, a picture is taken of whoever is at the door and runs facial recognition from your Facebook friends, and so Alexa can tell you who is at your door
+                        <div class="content blurb">
+                            We took inspiration from Mark Zuckerberg's JARVIS, and gave Alexa the skill to recognize who
+                            is ringing your doorbell. We connected a simple webcam to a Raspberry Pi that snaps a
+                            picture when you ask Alexa who's at the door. It runs facial recognition based on your
+                            Facebook friends and tells you who it thinks it most likely is. \n\nTeam Members:\nScott
+                            Miller
                         </div>
                     </div>
                 </a>
+            </div>
+
+        </div>
+        <div id="animatedModal">
+            <div class="close-animatedModal center">
+                <img src="assets/images/closebt.svg" class="closebt">
+            </div>
+            <div class="modal-container container">
+                <div class="row">
+                    <div class="col-sm-3 modal-header">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-12 ">
+                                <img class="portfolio-image">
+                            </div>
+                            <div class="col-xs-10 col-xs-6">
+                                <a class="project-link" target="_blank">
+                                    <h3 class="subtitle"></h3>
+                                    <div class="meta"></div>
+                                </a>
+                                <div class="platforms phone-show">
+                                    <span class='fa fa-3x white fa-apple apple'></span>
+                                    <span class='fa fa-3x white fa-android android'></span>
+                                    <span class='fa fa-3x white fa-globe web'></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 container-fluid modal-blurb">
+                        <div class="row platforms col-sm-offset-8 phone-hide">
+                            <span class='fa fa-3x white pull-right fa-apple apple'></span>
+                            <span class='fa fa-3x white fa-android pull-right android'></span>
+                            <span class='fa fa-3x white  pull-right fa-globe web'></span>
+                        </div>
+                        <div class="row">
+                            <p class="blurb-text"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -497,10 +633,10 @@
                 <p>Want to hire me for one of your projects? Contact me via email or the form!</p>
                 <p><strong>I can help with the following:</strong></p>
                 <ul class="list-unstyled service-list">
-                    <li><i class="fa fa-check" aria-hidden="true"></i> Web Development</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> iOS and Android Development</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> Systems Programming</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i> Server-side Development</li>
+                    <li><i class="fa fa-check"></i> Web Development</li>
+                    <li><i class="fa fa-check"></i> iOS and Android Development</li>
+                    <li><i class="fa fa-check"></i> Systems Programming</li>
+                    <li><i class="fa fa-check"></i> Server-side Development</li>
                 </ul>
                 <ul class="social list-inline">
                     <li><a href="https://linkedin.com/in/sushshring" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -515,7 +651,8 @@
                     <input class="hidden" type="text" name="_gotcha">
                     <div class="form-group">
                         <label for="email" class="font-sm">*Email address:</label>
-                        <input type="email" class="form-control" id="email" name="_replyto" placeholder="johnnyappleseed@email.com" type="email" required="true">
+                        <input class="form-control" id="email" name="_replyto" placeholder="johnnyappleseed@email.com"
+                               type="email" required="true">
                     </div>
 
                     <div class="form-group">
@@ -548,20 +685,18 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-offset-9">
-                                    <button class="btn submit-btn" type="submit">Submit</button>
+                                    <button class="btn submit-btn">Submit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                </form>
             </div>
-            </form>
         </div>
-</div>
-<!--//intro-->
+        <!--//intro-->
 
-</section>
-<!--//section-->
+    </section>
+    <!--//section-->
 
 </div>
 <!-- Main Container Ends -->

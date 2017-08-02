@@ -18,7 +18,7 @@ h6 {
     font-weight: 500;
 }
 a {
-    color: #26625B;
+    color: #421414;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
@@ -27,7 +27,7 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    color: #26625B;
+    color: #421414;
 }
 a:focus {
     text-decoration: none;
@@ -43,7 +43,7 @@ p {
 }
 .btn,
 a.btn {
-    background: #26625B;
+    background: #421414;
     color: #fff;
     padding: 8px 15px;
     -webkit-border-radius: 2px;
@@ -64,7 +64,7 @@ a.btn {
 .btn:hover,
 a.btn:hover {
     color: #fff;
-    background: #16756D;
+    background: #0c8091;
 }
 #topcontrol {
     display:none;
@@ -73,7 +73,7 @@ a.btn:hover {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    background: #26625B;
+    background: #421414;
     color: #fff;
     text-align: center;
     z-index: 30;
@@ -92,7 +92,7 @@ a.btn:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
 }
 #topcontrol:hover {
-    background: #26625B;
+    background: #421414;
     color: #fff;
 }
 #topcontrol .fa {
@@ -104,9 +104,6 @@ a.btn:hover {
 
 .left {
     text-align: left;
-}
-.center {
-    text-align: center;
 }
 .right{
     text-align: right;
@@ -121,7 +118,7 @@ a.btn:hover {
 
 /* ======= HEADER ======= */
 .header {
-    background: #00877A;
+    background: #833a3a;
     color: #fff;
 }
 .header a {
@@ -194,7 +191,7 @@ a.btn:hover {
     margin-bottom: 30px;
 }
 .header .intro {
-    background: #00544A;
+    background: #4e1616;
     padding-top: 90px;
     padding-bottom: 60px;
     position: relative;
@@ -205,7 +202,7 @@ a.btn:hover {
     margin: 0 auto;
 }
 .header .contact-info {
-    background: #17746C;
+    background: #833a3a;
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 16px;
@@ -234,7 +231,7 @@ a.btn:hover {
     height: 60px;
 }
 .page-nav-wrapper {
-    background: #003D36;
+    background: #431717;
     padding-top: 20px;
     padding-bottom: 20px;
     position: absolute;
@@ -319,7 +316,7 @@ a.btn:hover {
 }
 /* ======= Work ======= */
 .timeline {
-    border-left: 3px solid #26625B;
+    border-left: 3px solid #421414;
     border-bottom-right-radius: 2px;
     border-top-right-radius: 2px;
     position: relative;
@@ -351,7 +348,7 @@ a.btn:hover {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     background: #fff;
-    border: 3px solid #26625B;
+    border: 3px solid #421414;
 }
 .timeline .item:after {
     content: "";
@@ -369,7 +366,7 @@ a.btn:hover {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    background: #26625B;
+    background: #421414;
     z-index: 10;
 }
 .timeline:after{
@@ -388,7 +385,7 @@ a.btn:hover {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    background: #26625B;
+    background: #421414;
     z-index: 10;
 }
 .timeline .work-place {
@@ -466,7 +463,7 @@ a.btn:hover {
 }
 .timeline .job-meta .title {
     font-size: 18px;
-    color: #26625B;
+    color: #421414;
     overflow-wrap: break-word;
 }
 .timeline .job-meta .time {
@@ -500,7 +497,7 @@ a.btn:hover {
 
 .education-section .degree {
     font-size: 25px;
-    color: #26625B;
+    color: #421414;
     margin-top: 0;
     margin-bottom: 0px;
 }
@@ -679,14 +676,14 @@ a.btn:hover {
     margin-right: 0;
 }
 .portfolio-section .filters .type.active {
-    color: #26625B;
-    border-bottom: 2px solid #26625B;
+    color: #421414;
+    border-bottom: 2px solid #421414;
 }
 .portfolio-section .item {
     margin-bottom: 30px;
 }
 .portfolio-section .item-inner {
-    background: #26625B;
+    background: #421414;
     color: #fff;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -744,12 +741,6 @@ a.btn:hover {
 }
 .portfolio-section .content-description {
     display: none;
-    position: absolute;
-    top: 0px;
-    background-color: rgba(0,0,0,0.8);
-    width: 89%;
-    height: 100%;
-    padding: 10px;
 }
 
 
@@ -777,7 +768,7 @@ a.btn:hover {
     margin-bottom: 15px;
 }
 .contact-section .service-list .fa {
-    color: #26625B;
+    color: #421414;
 }
 .contact-section .social {
     margin-bottom: 0;
@@ -795,7 +786,7 @@ a.btn:hover {
     color: #8a8a8a;
 }
 .contact-section .social a:hover {
-    color: #26625B;
+    color: #421414;
 }
 .footer .container {
     padding: 30px;
@@ -805,6 +796,86 @@ a.btn:hover {
 .footer .container a {
     color: #8a8a8a;
 }
+
+.close-animatedModal {
+    padding: 15px;
+}
+
+.closebt {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.closebt:hover {
+    transform: rotate(270deg);
+}
+
+.modal-container {
+    padding: 16px;
+}
+
+.modal-container .portfolio-image {
+    max-width: 100%;
+    /*background-color: #565656;*/
+    max-height: 156px;
+}
+
+.modal-container .modal-header {
+    border-bottom: none;
+}
+
+.modal-container .modal-header .subtitle {
+    color: #FFF;
+}
+
+.modal-container .modal-header .meta {
+    color: #FFF;
+}
+
+.modal-container .modal-blurb {
+    color: #FFF;
+    font-size: large;
+}
+
+.modal-container .blurb-text {
+    display: block;
+}
+
+@media (max-width: 425px) {
+    .phone-hide {
+        display: none;
+    }
+
+    .phone-show {
+        display: inherit;
+    }
+}
+
+@media (min-width: 426px) {
+    .phone-hide {
+        display: inherit;
+    }
+
+    .phone-show {
+        display: none;
+    }
+}
+
+.modal-container .modal-blurb .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+}
+
+.modal-container .platforms {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 
 /*************** FORM ***************/
 .hidden {
@@ -883,6 +954,7 @@ select {
         font-size: 12px;
         margin-right: 5px;
         padding: 8px 5px;
+        -webkit-padding-start: 0;
     }
     .portfolio-section .item-inner .content {
         padding: 15px;

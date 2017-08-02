@@ -20,22 +20,23 @@ function dd_scrolltotop(duration){
 $('.carousel').carousel();
 
 $('document').ready(function() {
+    var nav = $('nav');
     if ($(window).width() < 768) {
         console.log("on phone");
-        $('nav').removeClass('hidden-sm');
-        $('nav').removeClass('hidden-xs');
-        $('nav').addClass('navbar-fixed-bottom');
+        nav.removeClass('hidden-sm');
+        nav.removeClass('hidden-xs');
+        nav.addClass('navbar-fixed-bottom');
     }
     $(window).on('resize', function() {
         if($(this).width < 786) {
-            $('nav').removeClass('hidden-sm');
-            $('nav').removeClass('hidden-xs');
-            $('nav').addClass('navbar-fixed-bottom');
+            nav.removeClass('hidden-sm');
+            nav.removeClass('hidden-xs');
+            nav.addClass('navbar-fixed-bottom');
         }
     });
     
-    $('.chart').easyPieChart({		
-		barColor:'#26625B',//Pie chart colour
+    $('.chart').easyPieChart({
+        barColor: '#0c8091',//Pie chart colour
 		trackColor: '#e8e8e8',
 		scaleColor: false,
 		lineWidth : 5,
@@ -73,16 +74,18 @@ $('document').ready(function() {
             $('#topcontrol').fadeIn("slow");
             $(".page-nav-wrapper").addClass('fixed');
         } else {
-            $('#topcontrol').fadeOut("slow", );
+            $('#topcontrol').fadeOut("slow");
             $(".page-nav-wrapper").removeClass('fixed');
         }
     });
     $('#page-nav').find('a').click(function (e) {
+        e.preventDefault();
         console.log($(e.target).attr('href'));
         scrollToID($(e.target).attr('href'), 1000);
     });
 
-    $('#topcontrol').click(function() {
+    $('#topcontrol').click(function (e) {
+        e.preventDefault();
         scrollToID('header', 2000);
     });
     
@@ -100,11 +103,116 @@ $('document').ready(function() {
             mainNav.removeClass("open");
         }
 	}
-    $('.item').hover(function(e) {
-        var href = $(this).find('.item-inner').attr('data-href');
-        $('.content-description[data-target='+href+']').show(200);
-    }, function(e) {
-        var href = $(this).find('.item-inner').attr('data-href');
-        $('.content-description[data-target='+href+']').hide(200);
+
+    // $('.item').hover(function(e) {
+    //     var href = $(this).find('.item-inner').attr('data-href');
+    //     $('.content-description[data-target='+href+']').show(200);
+    // }, function(e) {
+    //     var href = $(this).find('.item-inner').attr('data-href');
+    //     $('.content-description[data-target='+href+']').hide(200);
+    // });
+
+    $(".modal-target").animatedModal({
+        animatedIn: 'zoomIn',
+        animatedOut: 'zoomOutUp',
+        animationDuration: '.6s',
+        color: '#565656',
+        beforeOpen: function () {
+            console.log($(this));
+            console.log("opening");
+
+        },
+        beforeClose: function () {
+            console.log("closing");
+        }
+    });
+
+    var modalModel = {
+        link: String,
+        image: String,
+        blurb: String,
+        title: String,
+        meta: String,
+        platforms: [],
+        bgcolor: String
+    };
+    $('.modal-target').click(function (e) {
+        e.preventDefault();
+        modalModel.link = $(this).attr('modal-href');
+        modalModel.image = $(this).find('.img-responsive').attr('src');
+        modalModel.blurb = $(this).find('.blurb').text();
+        modalModel.title = $(this).find('.sub-title').text();
+        modalModel.meta = $(this).find('.meta').text();
+        modalModel.blurb = modalModel.blurb.replace(/\\n/g, "<br />");
+        modalModel.platforms = [];
+        modalModel.bgcolor = $(this).attr('modal-color');
+        if (!modalModel.bgcolor) {
+            modalModel.bgcolor = "#565656";
+        }
+        $(this).parent().prop('classList').forEach(function (nextClass) {
+            if (['ios', 'android', 'web'].indexOf(nextClass) >= 0) {
+                modalModel.platforms.push(nextClass);
+            }
+        });
+        updateModal(modalModel);
+    });
+
+    function updateModal(modalModel) {
+        var modal = $('#animatedModal');
+        modal.find('.portfolio-image').attr('src', modalModel.image);
+        modal.find('.subtitle').text(modalModel.title);
+        modal.find('.project-link').attr('href', modalModel.link);
+        modal.find('.meta').text(modalModel.meta);
+        console.log(modalModel);
+        modal.find('.blurb-text').html(modalModel.blurb);
+        if (modalModel.bgcolor) {
+            modal.css('background-color', modalModel.bgcolor);
+            // modal.find('.portfolio-image').css('background-color', modalModel.bgcolor);
+        }
+        if (!modalModel.link) {
+            modal.find('.subtitle').css('text-decoration', 'none');
+        } else {
+            modal.find('.subtitle').css('text-decoration', 'underline');
+        }
+        var platformDiv = modal.find('.platforms');
+        $('.platforms').children().hide();
+        modalModel.platforms.forEach(function (element) {
+            switch (element) {
+                case 'ios':
+                    platformDiv.children('.apple').show();
+                    break;
+                case 'android':
+                    platformDiv.children('.android').show();
+                    break;
+                case 'web':
+                    platformDiv.children('.web').show();
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+
+    /* ======= Isotope plugin ======= */
+    /* Ref: http://isotope.metafizzy.co/ */
+    // init Isotope
+    var $container = $('.isotope');
+
+    $container.isotope({
+        itemSelector: '.item'
+    });
+    // filter items on click
+    $('#filters').on('click', '.type', function () {
+        var filterValue = $(this).attr('data-filter');
+        $container.isotope({filter: filterValue});
+    });
+
+    // change is-checked class on buttons
+    $('.filters').each(function (i, typeGroup) {
+        var $typeGroup = $(typeGroup);
+        $typeGroup.on('click', '.type', function () {
+            $typeGroup.find('.active').removeClass('active');
+            $(this).addClass('active');
+        });
     });
 });
