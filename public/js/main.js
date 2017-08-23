@@ -34,7 +34,7 @@ $('document').ready(function() {
             nav.addClass('navbar-fixed-bottom');
         }
     });
-    
+
     $('.chart').easyPieChart({
         barColor: '#0c8091',//Pie chart colour
 		trackColor: '#e8e8e8',
@@ -44,7 +44,7 @@ $('document').ready(function() {
 		onStep: function(from, to, percent) {
 			$(this.el).find('span').text(Math.round(percent));
 		}
-	});  
+    });
     $(window).on('reload load', function(e) {
         if ($(this).scrollTop() >= $(".page-nav-space-holder").offset().top) {
             $(".page-nav-wrapper").addClass('fixed');
@@ -55,7 +55,7 @@ $('document').ready(function() {
     $(window).on('scroll', function(e) {
         var scrollTop = $(this).scrollTop();
         var navHeight = $(".page-nav-space-holder").offset().top;
-        
+
         if (scrollTop <= 20) {
             $('#page-nav').find('li').each(function () {
                 $(this).removeClass('active');
@@ -69,7 +69,7 @@ $('document').ready(function() {
                 }
             });
         }
-        
+
         if (scrollTop >= navHeight) {
             $('#topcontrol').fadeIn("slow");
             $(".page-nav-wrapper").addClass('fixed');
@@ -88,8 +88,8 @@ $('document').ready(function() {
         e.preventDefault();
         scrollToID('header', 2000);
     });
-    
-	function scrollToID(id, speed){
+
+    function scrollToID(id, speed){
         var offSet = $(".page-nav-space-holder").height()+20;
         var targetOffset = $(id).offset().top - offSet;
         var mainNav = $('#main-nav');
@@ -118,12 +118,11 @@ $('document').ready(function() {
         animationDuration: '.6s',
         color: '#565656',
         beforeOpen: function () {
-            console.log($(this));
-            console.log("opening");
+        },
+        afterOpen: function () {
 
         },
         beforeClose: function () {
-            console.log("closing");
         }
     });
 

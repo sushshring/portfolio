@@ -11,8 +11,5 @@
   "dependencies": {
     "easy-pie-chart": "^2.1.7",
     "jquery-form-validator": "^2.3.64"
-  },
-  "devDependencies": {
-    "@angular/cli": "^1.0.4"
   }
 }
