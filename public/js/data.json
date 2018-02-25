@@ -1,0 +1,61 @@
+{
+  "experiences": [
+    {
+      "name": "Research Assistant",
+      "companyName": "Institute for Networking and Security Research | PENNSYLVANIA STATE UNIVERSITY",
+      "logo": "",
+      "redirect": "",
+      "location": "State College, PA",
+      "duration": "Jan 2018 - Present",
+      "points": [
+        "Assist with state-of-the-art network security research",
+        "Investigate security for technologies such as Artificial Intelligence and Autonomous Driving"
+      ]
+    },
+    {
+      "name": "Software Engineering Intern",
+      "companyName": "Smartleaven  Technologies",
+      "logo": "",
+      "location": "Pune, India",
+      "duration": "May 2017 - July 2017",
+      "points": [
+      ]
+    },
+    {
+      "name": "Learning Assistant - CMPSC 465",
+      "companyName": "CSE Department | Pennsylvania State University",
+      "logo": "",
+      "location": "State College, PA",
+      "duration": "August 2017 - December 2017",
+      "points": [
+        "Work closely with students for solving queries related to Data Structures and Algorithms.",
+        "Hold regular office hours to provide assistance to students with understanding the concepts.",
+        "Grade submitted homework in person for proofs, algorithms, and problem-solving techniques",
+        "Collaborate with the Teaching Assistants to monitor and maintain the online coding assignment suite in the Python language."
+      ]
+    },
+    {
+      "name": "Knowledge Commons Service Desk Consultant",
+      "companyName": "Information Technology Services | Pennsylvania State University",
+      "logo": "",
+      "location": "State College, PA",
+      "duration": "August 2016 - July 2017",
+      "points": [
+        "Consulted with students for various technological issues",
+        "Cooperated with a team of consultants to ensure timely delivery of repairs"
+      ]
+    },
+    {
+      "name": "IT Intern",
+      "companyName": "Infineon Technologies",
+      "logo": "",
+      "location": "El Segundo, CA | Chandler, AZ",
+      "duration": "May 2016 - August 2016",
+      "points": [
+        "Built technical specification documents for .NET and SQL server applications",
+        "Contributed to a large global team with SharePoint 2010 to 2013 migration for 5500 total sites",
+        "Programmed a Document Approval system based on AngularJS and Nintex workflows"
+      ]
+    }
+  ]
+}
